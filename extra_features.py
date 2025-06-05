@@ -39,7 +39,7 @@ def toggle_visuals(df):
     if st.checkbox("Show Total Spending"):
         st.write(f"Total: **${df['Amount'].sum():.2f}**")
 
-    if st.checkbox("Show Spending by Category"):
+    if st.checkbox("Show Spending by Categroy"):
         st.bar_chart(df.groupby("Category")["Amount"].sum())
 
     if st.checkbox("Show Daily Spending Line Chart"):
